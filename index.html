@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — DocDesk</title>
+<meta name="description" content="What DocDesk stores, why, who it is shared with, and how to have it deleted.">
+<link rel="canonical" href="https://riyazshaikh16in.github.io/docdesk-privacy/">
+<style>
+  :root { color-scheme: light dark; --ink:#0f2536; --ink-muted:#51646e; --accent:#1f6272; --bg:#ffffff; --panel:#f1f8f9; --line:#dce9ec; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#eef5f7; --ink-muted:#9fb6bf; --accent:#7fc6d6; --bg:#0c2436; --panel:#112f45; --line:#1b4868; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:44rem; margin:0 auto; padding:2.5rem 1.5rem 4rem; }
+  header { border-bottom:1px solid var(--line); padding-bottom:1.25rem; margin-bottom:1.75rem; }
+  .brand { display:inline-block; font-weight:800; letter-spacing:-.01em; margin-bottom:.6rem; } .brand span { color:var(--accent); }
+  h1 { font-size:1.75rem; margin:0 0 .35rem; letter-spacing:-.01em; } .sub { color:var(--ink-muted); font-size:.9rem; margin:0; }
+  h2 { font-size:1.125rem; margin:2rem 0 .6rem; } p { margin:0 0 .9rem; } ul { margin:0 0 .9rem; padding-left:1.35rem; } li { margin-bottom:.55rem; }
+  a { color:var(--accent); } code { background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:.1em .35em; font-size:.875em; }
+  .lede { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:1rem 1.15rem; margin-bottom:.5rem; } .lede p:last-child { margin-bottom:0; }
+  footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--line); color:var(--ink-muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">Doc<span>Desk</span></div>
+  <h1>Privacy Policy</h1>
+  <p class="sub">DocDesk by RS Labs · Last updated 27 September 2026</p>
+</header>
+
+<div class="lede">
+  <p>DocDesk helps a doctor run a clinic's front desk: give patients daily tokens, run the OPD
+  queue, show the queue on a waiting-room screen, collect consultation fees and share receipts.
+  This page says exactly what we store, why, who else handles it, and how to get it deleted. It
+  covers the Android app (<code>com.rslabs.docdesk</code>) and the web app at
+  <a href="https://docdesk-rslabs.web.app">docdesk-rslabs.web.app</a>.</p>
+</div>
+
+<h2>Who is responsible for what</h2>
+<p>DocDesk has one kind of user: the <strong>doctor</strong> (clinic owner). The doctor decides
+which patient details to enter and is responsible for having their patients' permission to do so.
+RS Labs stores and processes that information only on the doctor's behalf, to provide the app.</p>
+
+<h2>What we collect about the doctor</h2>
+<ul>
+  <li><strong>Mobile number</strong> — used only to sign you in with a one-time code (OTP). The SMS
+  is sent by Google Firebase Authentication.</li>
+  <li><strong>Clinic profile</strong> — clinic name, doctor's name and qualification, clinic
+  address and phone, consultation fee and receipt settings. These appear on receipts.</li>
+  <li><strong>Subscription status</strong> — your free-trial dates and, if you subscribe, the
+  Razorpay reference for each DocDesk payment.</li>
+</ul>
+
+<h2>What the doctor stores about patients</h2>
+<ul>
+  <li><strong>Patient details</strong> — name, and optionally mobile number, age, gender and
+  address.</li>
+  <li><strong>Visit and fee records</strong> — visit dates, token numbers, whether the patient was
+  seen, fees, payments received (amount, cash / UPI / card, an optional reference) and receipt
+  numbers.</li>
+</ul>
+<p><strong>DocDesk does not store medical records.</strong> There are no fields for symptoms,
+diagnoses, prescriptions, test results, vitals, attachments or clinical notes. DocDesk never
+stores full card numbers, UPI PINs or bank details.</p>
+
+<h2>The waiting-room display</h2>
+<p>If the doctor turns on the TV queue display, DocDesk creates a private, hard-to-guess link that
+shows the clinic name, the doctor's name, the current and upcoming <strong>token numbers and
+patient names</strong>, and the list of missed tokens. Phone numbers and fees are never shown
+there. Anyone who has the link can see that screen, so the doctor controls who gets it (for
+example, a TV in the waiting room, or patients who receive it with their token). The doctor can
+reset the link at any time, which stops the old link from working immediately.</p>
+
+<h2>What we do not do</h2>
+<ul>
+  <li>No advertising, no ad identifiers, and no selling or renting of data.</li>
+  <li>No analytics or tracking SDKs.</li>
+  <li>We do not message patients. Token numbers and receipts are sent by the doctor from their
+  own WhatsApp or share sheet; DocDesk only prepares the message or PDF.</li>
+</ul>
+
+<h2>Where it is stored and who can see it</h2>
+<ul>
+  <li>Records are stored in <strong>Google Cloud Firestore in Mumbai, India</strong>, encrypted in
+  transit and at rest by Google.</li>
+  <li>Each clinic's records can be read only by that doctor's signed-in account; this is enforced
+  by server-side security rules. The only exception is the waiting-room display described above.</li>
+  <li>RS Labs can see account, clinic and patient records through an internal, access-controlled
+  admin console. We use it only to run and support the service — for example account and trial
+  status, usage statistics, fixing problems you report, preventing abuse and handling deletion
+  requests. Every access is logged, and we never use patient details to contact patients or for
+  marketing.</li>
+</ul>
+
+<h2>Service providers</h2>
+<ul>
+  <li><strong>Google Firebase</strong> (Authentication, Firestore, Cloud Functions, Hosting) — to
+  run the app. <a href="https://firebase.google.com/support/privacy">Firebase privacy</a>.</li>
+  <li><strong>Razorpay</strong> — only if the doctor buys a DocDesk subscription. Razorpay collects
+  the payment details on its own page; we receive only the payment status and reference.
+  <a href="https://razorpay.com/privacy/">Razorpay privacy</a>.</li>
+</ul>
+
+<h2>How long we keep it</h2>
+<ul>
+  <li>Everything is kept while the account exists, so the clinic can see its full history.</li>
+  <li>When the doctor deletes the account, all clinic data, patient records and the display link
+  are deleted immediately.</li>
+  <li>We keep a <strong>one-way hash of the doctor's phone number and the free-trial end
+  date</strong> after deletion, only to stop the free trial being claimed again. It cannot be
+  turned back into the phone number.</li>
+  <li>Payment records that Razorpay must keep by law are retained by Razorpay under its own
+  policy.</li>
+</ul>
+
+<h2>Deleting data</h2>
+<ul>
+  <li><strong>Doctors:</strong> in the app, open <em>More → Settings → Delete account</em>. This
+  permanently deletes the clinic, all patients, visits and receipts, the display link, cancels any
+  DocDesk subscription, and removes the login. See <a href="delete-account/">how to delete your
+  account</a> for the other options.</li>
+  <li><strong>Patients:</strong> ask your doctor to remove your details. If you cannot reach them,
+  email us (below) with the clinic's name and your mobile number and we will pass the request to
+  the doctor.</li>
+  <li>Doctors can export all their data at any time from <em>Reports → Export all data</em>.</li>
+</ul>
+
+<h2>Children</h2>
+<p>DocDesk is a tool for doctors and is not directed at children. A clinic may register patients
+under 18; the doctor is responsible for having a parent or guardian's consent.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes in a way that affects what we collect, we will update the date at the
+top of this page and mention it in the app's release notes.</p>
+
+<h2>Contact</h2>
+<p>RS Labs, Pune, India · <a href="mailto:riyazshaikh16in@gmail.com">riyazshaikh16in@gmail.com</a></p>
+
+<footer>
+  DocDesk · <code>com.rslabs.docdesk</code> · <a href="delete-account/">Delete your account</a>
+</footer>
+
+</div>
+</body>
+</html>
